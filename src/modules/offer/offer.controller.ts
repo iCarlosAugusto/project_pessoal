@@ -6,10 +6,12 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 import { OfferService } from './offer.service';
 import { UpdateOfferDto } from './dto/update-offer.dto';
 import { CreateOfferDto } from './dto/create-offer.dto';
+import { JwtGuard } from '../auth/guards/jwt-auth.guard';
 
 @Controller('offer')
 export class OfferController {
@@ -20,6 +22,7 @@ export class OfferController {
     return this.offerService.create(createOfferDto);
   }
 
+  @UseGuards(JwtGuard)
   @Get()
   findAll() {
     return this.offerService.findAll();
