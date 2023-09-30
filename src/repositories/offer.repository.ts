@@ -9,7 +9,9 @@ export class OfferRepository {
 
   async create(createOfferDto: CreateOfferDto) {
     const offer = await this.prisma.offer.create({
-      data: createOfferDto,
+      data: {
+        ...createOfferDto,
+      },
     });
     return offer;
   }

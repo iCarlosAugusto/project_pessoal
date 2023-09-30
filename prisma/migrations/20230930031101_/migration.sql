@@ -3,7 +3,8 @@ CREATE TABLE "Offer" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "brand" TEXT NOT NULL,
-    "model" TEXT NOT NULL
+    "model" TEXT NOT NULL,
+    "imageUrl" TEXT NOT NULL
 );
 
 -- CreateIndex

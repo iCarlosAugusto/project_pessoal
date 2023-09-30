@@ -12,4 +12,8 @@ export class CreateOfferDto {
   @IsNotEmpty()
   @IsString()
   model: string;
+
+  @IsNotEmpty()
+  @IsString()
+  imageUrl: string;
 }
