@@ -33,7 +33,7 @@ export class AuthService {
     };
     return {
       username,
-      aceessToken: this.jwtService.sign(payload),
+      acessToken: this.jwtService.sign(payload),
       refreshToken: this.jwtService.sign(payload, {
         expiresIn: '7d',
       }),
@@ -49,7 +49,7 @@ export class AuthService {
       },
     };
     return {
-      aceessToken: this.jwtService.sign(payload),
+      acessToken: this.jwtService.sign(payload),
     };
   }
 }
