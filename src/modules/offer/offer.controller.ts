@@ -23,9 +23,9 @@ export class OfferController {
   }
 
   @UseGuards(JwtGuard)
-  @Get()
-  findAll() {
-    return this.offerService.findAll();
+  @Get(':page')
+  findAll(@Param('page') page: number) {
+    return this.offerService.findAll(+page);
   }
 
   @Get(':id')

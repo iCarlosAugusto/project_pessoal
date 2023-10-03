@@ -16,8 +16,14 @@ export class OfferRepository {
     return offer;
   }
 
-  async findAll() {
-    const offers = await this.prisma.offer.findMany();
+  async findAll(page: number) {
+    const offers = await this.prisma.offer.findMany({
+      take: 3,
+      skip: page,
+      orderBy: {
+        createdAt: 'asc',
+      },
+    });
     return offers;
   }
 

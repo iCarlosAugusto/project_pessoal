@@ -11,8 +11,8 @@ export class OfferService {
     return this.offerRepository.create(createOfferDto);
   }
 
-  findAll() {
-    return this.offerRepository.findAll();
+  findAll(page: number) {
+    return this.offerRepository.findAll(page);
   }
 
   findOne(id: string) {
