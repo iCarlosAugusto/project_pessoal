@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsInt, IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateOfferDto {
   @IsNotEmpty()
@@ -12,6 +12,10 @@ export class CreateOfferDto {
   @IsNotEmpty()
   @IsString()
   model: string;
+
+  @IsInt()
+  @IsNotEmpty()
+  price: number;
 
   @IsNotEmpty()
   @IsString()

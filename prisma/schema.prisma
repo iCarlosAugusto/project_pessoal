@@ -13,5 +13,6 @@ model Offer {
   name   String
   brand  String
   model  String
+  price  Int
   imageUrl String
 }

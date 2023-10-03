@@ -21,7 +21,7 @@ export class OfferRepository {
       take: 3,
       skip: page,
       orderBy: {
-        createdAt: 'asc',
+        price: 'asc',
       },
     });
     return offers;
