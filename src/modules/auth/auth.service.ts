@@ -8,8 +8,8 @@ export class AuthService {
   private findUser = (username: string, password: string) => {
     if (username === 'adm' && password === 'adm') {
       return {
-        email: 'admin@admin.com',
-        password: 'admin',
+        username: 'Admin',
+        password: 'adm',
       };
     }
   };
@@ -24,11 +24,12 @@ export class AuthService {
     return null;
   }
 
-  async login(username: string) {
+  async login(username: string, password: string) {
     const payload = {
       username: username,
       sub: {
         username: username,
+        password: password,
       },
     };
     return {
